@@ -17,6 +17,13 @@ get '/lewis' do
     "I am really poorly"
 end
 
-get '/cat' do
+get '/random-cat' do
+    @cat_name = ["Amigo", "Misty", "Almond"].sample
+    erb(:cat)
+end
+
+get '/named-cat' do
+    p params
+    @cat_name = params[:name]
     erb(:cat)
 end
