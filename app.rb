@@ -18,5 +18,5 @@ get '/lewis' do
 end
 
 get '/cat' do
-    "<img src = https://i.imgur.com/jFaSxym.png style='border : dashed red'></img>"
+    erb(:cat)
 end
